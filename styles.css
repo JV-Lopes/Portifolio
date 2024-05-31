@@ -206,6 +206,11 @@ header.scroll .btn-abrir i{
     display: none;
 }
 
+.menu-mobile.scrolled {
+  background-color: rgba(128, 128, 128, 0.611);
+  transition: background-color 0.5s ease;
+}
+
 /*Topo*/
 
 section.topo {
@@ -439,10 +444,13 @@ footer .line-footer p a {
 
   header {
     padding: 20px 8%;
+    background-color: transparent;
+    transition: background-color .2s ease;
   }
   
   header.scroll {
-    padding: 20px 8%; 
+    padding: 20px 8%;
+    background-color: rgb(227, 227, 227);
   }
   
   .flex {
