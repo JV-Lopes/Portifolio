@@ -39,8 +39,8 @@ body {
 }
 
 .Contato.scroll button {
-  padding: 8px 30px;
-  font-size: 16px;
+  padding: 5px 30px;
+  font-size: 19px;
   top: 12px;
 }
 
@@ -90,7 +90,7 @@ header a {
   color: rgb(120, 120, 120);
   text-decoration: none;
   display: inline-block;
-  transition: .2s;
+  transition: .4s;
 }
 
 .Contato button a{
@@ -111,6 +111,42 @@ header nav.Menu ul li {
   padding: 5px 90px;
   font-size: 18px;
 }
+
+header nav.Menu ul li:hover{
+  font-weight: 500;
+}
+
+header nav.Menu a {
+  color: rgb(120, 120, 120);
+  text-decoration: none;
+  display: inline-block;
+  position: relative; 
+  transition: color 0.2s;
+  transition: .3s;
+}
+
+header nav.Menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 1px;
+  right: 0;
+  background: black;
+  transition: width 0.3s ease, right 0.3s ease;
+}
+
+header nav.Menu a:hover::after {
+  width: 100%;
+  left: 0; 
+}
+
+header nav.Menu a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
 
 .linha-menu{
   border-bottom: 3px solid purple;
@@ -214,7 +250,7 @@ header.scroll .btn-abrir i{
 /*Topo*/
 
 section.topo {
-  padding: 40px 4%;
+  padding: 80px 4%;
 }
 
 section.topo .flex {
@@ -263,7 +299,7 @@ section.topo .flex {
 
 /*Estilo Esp*/
 section.Especialidades {
-  padding: 80px 4%;
+  padding: 100px 4%;
 }
 
 section.Especialidades .flex {
@@ -295,7 +331,7 @@ section.Especialidades .flex {
 
 /*Portifólio*/
 section.Portifolio {
-  padding: 70px 4%;
+  padding: 100px 4%;
   box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.29);
 }
 
@@ -345,7 +381,7 @@ section.Portifolio .flex {
 
 /*Formulario*/
 section.formulario {
-  padding: 80px 4%;
+  padding: 100px 4%;
 }
 
 .formulario p{
