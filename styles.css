@@ -1,0 +1,482 @@
+/*Geral*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: white;
+  height: 100%;
+  padding-top: 120px;
+}
+
+.flex {
+  display: flex;
+}
+
+.Contato {
+  position: absolute;
+  top: 70px;
+  right: 55px;
+}
+
+.Contato button {
+  padding: 10px 40px;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: purple;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: white;
+  position: fixed;
+  right: 50px;
+  top: 10px;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h2.titulo {
+  color: black;
+  font-size: 35px;
+  text-align: center;
+}
+
+h2.titulo span {
+  color: purple;
+}
+
+button:hover,
+form .btn-enviar input:hover {
+  box-shadow: 0px 0px 8px rgb(237, 4, 82);
+  transform: scale(1.1);
+}
+
+/*Cabeçario*/
+header {
+  padding: 80px 4%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  padding: 20px 8%;
+}
+
+header .interface {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header a {
+  color: rgb(120, 120, 120);
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s;
+}
+
+.Contato button a{
+    color: white;
+}
+
+header nav.Menu a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav.Menu ul li {
+  display: inline-block;
+  padding: 5px 90px;
+  font-size: 18px;
+}
+
+.linha-menu{
+  border-bottom: 3px solid purple;
+  padding: 4px 8%;
+}
+
+/*estilo mobile*/
+
+.btn-abrir i{
+    color: purple;
+    font-size: 40px;
+    position: absolute;
+    right: 30px;
+}
+
+.btn-abrir{
+    display: none;
+}
+
+.menu-mobile{
+    background-color: white;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 60%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: purple;
+    font-size: 25px;
+    
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: black;
+    font-size: 20px;
+    font-weight: 300px;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: purple;
+    color: white;
+}
+
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.285);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+/*Topo*/
+
+section.topo {
+  padding: 40px 4%;
+}
+
+section.topo .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.img-topo {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 6px solid black;
+  border-radius: 20px;
+}
+
+.topo .texto-topo h1 {
+  color: purple;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+.topo .texto-topo h1 span {
+  color: black;
+  display: block;
+}
+
+.topo .texto-topo p {
+  color: black;
+  margin: 20px 0;
+  font-size: 22px;
+  text-align: justify;
+}
+.btn-social button {
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: purple;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: 0.2s;
+}
+
+/*Estilo Esp*/
+section.Especialidades {
+  padding: 80px 4%;
+}
+
+section.Especialidades .flex {
+  gap: 60px;
+}
+
+.Especialidades .especialidadesBox {
+  color: black;
+  padding: 40px;
+  margin-top: 40px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.Especialidades .especialidadesBox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.319);
+}
+
+.Especialidades .especialidadesBox i {
+  font-size: 70px;
+  color: purple;
+}
+
+.Especialidades .especialidadesBox h3 {
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+/*Portifólio*/
+section.Portifolio {
+  padding: 70px 4%;
+  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.29);
+}
+
+section.Portifolio .flex {
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.img-port {
+  width: 360px;
+  height: 460px;
+  background-color: purple;
+  background-size: cover;
+  background-position: 100% 100%;
+  transition: 2s;
+  cursor: pointer;
+  border-radius: 30px;
+  position: relative;
+}
+
+.img-port:hover {
+  background-position: 50% 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.293);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  opacity: 0;
+  transition: 0.5s;
+  text-align: justify;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+/*Formulario*/
+section.formulario {
+  padding: 80px 4%;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background-color: black;
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 20px;
+  color: white;
+  font-size: 15px;
+}
+
+form textarea {
+  resize: none;
+  max-height: 400px;
+}
+
+form .btn-enviar {
+  margin-top: 15px;
+  text-align: center;
+}
+
+form .btn-enviar input {
+  width: 100px;
+  background-color: purple;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.feedback {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: red;
+}
+
+/*Rodape*/
+
+footer {
+  padding: 50px 4%;
+  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.29);
+}
+
+footer .flex {
+  justify-content: space-between;
+}
+
+.line-footer {
+  padding: 20px 0;
+}
+
+.borda {
+  border-top: 4px solid purple;
+}
+
+footer .line-footer p i {
+  color: purple;
+  font-size: 25px;
+}
+
+footer .line-footer p a {
+  color: black;
+}
+
+@media screen and (max-width: 1020px) {
+  /*gerais*/
+  .flex {
+    flex-direction: column;
+  }
+
+  h2.titulo {
+    color: black;
+    font-size: 32px;
+    line-height: 25px;
+  }
+
+  .topo .flex {
+    flex-direction: column-reverse;
+  }
+
+  .btn-abrir{
+    display: block;
+  }
+
+  /*cabeçario*/
+  .Menu,
+  .Contato {
+    display: none;
+  }
+
+  /*topo*/
+
+  section.topo .flex {
+    gap: 40px;
+  }
+
+  section.topo {
+    padding: 30px 8%;
+  }
+
+  .topo .texto-topo h1 {
+    font-size: 30px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .topo .texto-topo p {
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  .btn-social{
+    text-align: center;
+  }
+
+  img-topo {
+    width: 100%;
+  }
+
+  /*especialidades*/
+
+  section.Especialidades {
+    padding: 80px 8%;
+  }
+
+  /*portifolio*/
+
+  section.Portifolio{
+    padding: 80px 8%;
+  }
+
+  section.Portifolio .flex {
+    gap: 60px;
+  }
+
+  .img-port {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    height: 460px;
+  }  
+
+  /*rodape*/
+
+  footer .flex{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer .line-footer{
+    text-align: center;
+
+  }
+}
