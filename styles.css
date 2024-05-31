@@ -314,6 +314,11 @@ section.formulario {
   padding: 80px 4%;
 }
 
+.formulario p{
+  text-align: center;
+  justify-content: center;
+}
+
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -414,6 +419,10 @@ footer .line-footer p a {
   .Menu,
   .Contato {
     display: none;
+  }
+
+  .linha-menu {
+    border-bottom: none;
   }
 
   /*topo*/

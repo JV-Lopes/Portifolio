@@ -7,6 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+        emailjs.init('1p1nl9q7IpsziKxr_');
+    })();
+    </script>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
@@ -130,8 +137,9 @@
         <section id="contato" class="formulario">
             <div class="interface">
                 <h2 class="titulo">FALA <span>COMIGO.</span></h2>
+                <p>(Ainda não funciona)</p>
         
-                <form id="contactForm" action="sendEmail.php" method="POST">
+                <form id="contactForm">
                     <input type="text" name="nome" id="nome" placeholder="*Nome:" required>
                     <input type="email" name="email" id="email" placeholder="*Email:" required>
                     <input type="text" name="celular" id="celular" placeholder="Celular:">
@@ -142,7 +150,8 @@
                 </form>
                 <p id="feedback" class="feedback"></p>
             </div>
-        </section><!--Formulário-->
+        </section>
+        <!--Formulário-->
 
     </main>
 
