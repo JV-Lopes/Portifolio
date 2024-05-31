@@ -34,7 +34,14 @@ body {
   color: white;
   position: fixed;
   right: 50px;
-  top: 10px;
+  top: 22px;
+  transition: padding 0,3s, font-size 0.3s;
+}
+
+.Contato.scroll button {
+  padding: 8px 30px;
+  font-size: 16px;
+  top: 12px;
 }
 
 .interface {
@@ -60,19 +67,23 @@ form .btn-enviar input:hover {
 
 /*Cabeçario*/
 header {
-  padding: 80px 4%;
+  padding: 30px 8%;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   background-color: white;
-  padding: 20px 8%;
+  transition: padding 0.3s;
 }
 
 header .interface {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+header.scroll {
+  padding: 10px 8%;
 }
 
 header a {
