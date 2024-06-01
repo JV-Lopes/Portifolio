@@ -34,7 +34,7 @@ body {
   color: white;
   position: fixed;
   right: 50px;
-  top: 22px;
+  top: 20px;
   transition: padding 0,3s, font-size 0.3s;
 }
 
@@ -42,6 +42,26 @@ body {
   padding: 5px 30px;
   font-size: 19px;
   top: 12px;
+}
+
+.dark-mode-toggle button{
+  position: fixed;
+  padding: 6px;
+  font-size: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: purple;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: 0.2s;
+  top: 18px;
+  left: 230px;
+}
+
+.dark-mode-toggle.scroll button{
+  padding: 4px;
+  top: 5px;
+  transition: padding 0,3s, font-size 0.3s;
 }
 
 .interface {
@@ -245,6 +265,29 @@ header.scroll .btn-abrir i{
 .menu-mobile.scrolled {
   background-color: rgba(128, 128, 128, 0.611);
   transition: background-color 0.5s ease;
+}
+
+/*Menu mobile darkmode*/
+
+.menu-mobile .dark-mode-toggle {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.menu-mobile .dark-mode-toggle button {
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: purple;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-mobile .dark-mode-toggle.scroll button {
+  padding: 6px;
+  font-size: 24px;
 }
 
 /*Topo*/
@@ -465,6 +508,120 @@ footer .line-footer p a {
   color: black;
 }
 
+/*dark mode*/
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #1f1f1f;
+}
+
+.dark-mode header nav.Menu a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+.dark-mode header nav ul {
+  list-style-type: none;
+}
+
+.dark-mode header nav.Menu ul li {
+  display: inline-block;
+  padding: 5px 90px;
+  font-size: 18px;
+}
+
+.dark-mode header nav.Menu ul li:hover{
+  font-weight: 500;
+}
+
+.dark-mode header nav.Menu a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  position: relative; 
+  transition: color 0.2s;
+  transition: .3s;
+}
+
+.dark-mode header nav.Menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 1px;
+  right: 0;
+  background: white;
+  transition: width 0.3s ease, right 0.3s ease;
+}
+
+.dark-mode header nav.Menu a:hover::after {
+  width: 100%;
+  left: 0; 
+}
+
+.dark-mode header nav.Menu a:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+body.dark-mode .btn-social button {
+  background-color: #333;
+}
+
+body.dark-mode .topo .texto-topo h1 {
+  color: purple;
+}
+
+body.dark-mode .topo .texto-topo h1 span{
+  color: white;
+}
+
+body.dark-mode .topo .texto-topo p {
+  color: #e0e0e0;
+}
+
+body.dark-mode .Especialidades .especialidadesBox {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode .Portifolio {
+  box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.29);
+}
+
+body.dark-mode .img-port {
+  background-color: #333;
+}
+
+body.dark-mode .overlay {
+  background-color: rgba(255, 255, 255, 0.293);
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode footer {
+  box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.29);
+}
+
+.dark-mode h2.titulo {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+}
+
+.dark-mode .line-footer p a{
+  color: white;
+}
+
 @media screen and (max-width: 1020px) {
   /*gerais*/
 
@@ -476,6 +633,54 @@ footer .line-footer p a {
     z-index: 3;
     transition: .3s;
     font-size: 21px;
+  }
+
+  .menu-mobile {
+    background-color: white;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .menu-mobile.abrir-menu {
+    width: 60%;
+  }
+
+  .menu-mobile .btn-fechar {
+    padding: 15px;
+    display: flex;
+  }
+
+  .menu-mobile nav ul {
+    text-align: right;
+  }
+
+  .menu-mobile nav ul li {
+    margin: 20px 0;
+  }
+
+  .menu-mobile nav ul li a {
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .menu-mobile nav ul li a:hover {
+    background-color: purple;
+    color: white;
+  }
+
+  .menu-mobile .dark-mode-toggle {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
   }
 
   header {
