@@ -418,6 +418,10 @@ section.Portifolio .flex {
   text-align: justify;
 }
 
+.overlay a{
+  color: black;
+}
+
 .overlay:hover {
   opacity: 1;
 }
