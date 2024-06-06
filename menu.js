@@ -1,59 +1,57 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const btnMenu = document.getElementById('btn-menu');
+  const menu = document.getElementById('menu-mobile');
+  const overlay = document.getElementById('overlay-menu');
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  const darkModeToggleMobile = document.getElementById('dark-mode-toggle-mobile');
+  const header = document.querySelector('header');
+  const contatoBtn = document.querySelector('.Contato');
+  const body = document.body;
 
-let btnMenu = document.getElementById('btn-menu')
-let menu = document.getElementById('menu-mobile')
-let overlay = document.getElementById('overlay-menu') 
+  // Função para abrir o menu
+  const openMenu = () => {
+      menu.classList.add('abrir-menu');
+      overlay.classList.add('show-overlay');
+  };
 
-btnMenu.addEventListener('click', ()=>{
-    menu.classList.add('abrir-menu')
-})
+  // Função para fechar o menu
+  const closeMenu = () => {
+      menu.classList.remove('abrir-menu');
+      overlay.classList.remove('show-overlay');
+  };
 
-menu.addEventListener('click', ()=>{
-    menu.classList.remove('abrir-menu')
-})
+  // Eventos de clique para abrir/fechar menu
+  if (btnMenu) btnMenu.addEventListener('click', openMenu);
+  if (overlay) overlay.addEventListener('click', closeMenu);
+  const btnFechar = document.querySelector('.btn-fechar i');
+  if (btnFechar) btnFechar.addEventListener('click', closeMenu);
 
-overlay.addEventListener('click', ()=>{
-    menu.classList.remove('abrir-menu')
-})
+  // Alternar modo escuro
+  const toggleDarkMode = () => {
+      body.classList.toggle('dark-mode');
+  };
 
-window.addEventListener('scroll', function() {
-    var header = document.querySelector('header');
-    var contatoBtn = document.querySelector('.Contato');
-    var darkModeToggle = document.querySelector('dark-mode-toggle')
-    if (window.scrollY > 50) {
-      header.classList.add('scroll');
-      contatoBtn.classList.add('scroll');
-    } else {
-      header.classList.remove('scroll');
-      contatoBtn.classList.remove('scroll');
-    }
-  });
+  if (darkModeToggle) darkModeToggle.addEventListener('click', toggleDarkMode);
+  if (darkModeToggleMobile) darkModeToggleMobile.addEventListener('click', toggleDarkMode);
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    const body = document.body;
+  // Evento de rolagem
+  window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
 
-    darkModeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-    });
-});
+      if (scrollY > 50) {
+          header.classList.add('scroll');
+          contatoBtn.classList.add('scroll');
+      } else {
+          header.classList.remove('scroll');
+          contatoBtn.classList.remove('scroll');
+      }
 
-window.addEventListener('scroll', function() {
-  var darkModeToggle = document.getElementById('dark-mode-toggle');
-  var contatoButton = document.querySelector('.Contato');
-  
-  if (window.scrollY > 0) {
-    darkModeToggle.classList.add('scroll');
-    contatoButton.classList.add('scroll');
-  } else {
-    darkModeToggle.classList.remove('scroll');
-    contatoButton.classList.remove('scroll');
-  }
-
-  document.querySelector('.btn-abrir').addEventListener('click', function() {
-    document.getElementById('menu-mobile').classList.add('abrir-menu');
-  });
-
-  document.querySelector('.btn-fechar i').addEventListener('click', function() {
-    document.getElementById('menu-mobile').classList.remove('abrir-menu');
+      if (scrollY > 0) {
+          darkModeToggle.classList.add('scroll');
+          contatoBtn.classList.add('scroll');
+      } else {
+          darkModeToggle.classList.remove('scroll');
+          contatoBtn.classList.remove('scroll');
+      }
   });
 });

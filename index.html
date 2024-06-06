@@ -3,58 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portifólio de José Vieira Lopes Neto, desenvolvedor iniciante focado em Java, HTML-CSS, C# e JavaScript.">
+    <meta name="keywords" content="Portifólio, Desenvolvimento, Programação, Java, HTML, CSS, C#, JavaScript">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-    (function() {
-        emailjs.init('1p1nl9q7IpsziKxr_');
-    })();
-    </script>
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <title>Portifólio</title>
     <link rel="stylesheet" href="styles.css">
 
-    <script src="menu.js" defer></script>
+    <title>Portifólio</title>
 
+    <script defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script defer src="menu.js"></script>
+    <script>
+        (function() {
+            emailjs.init('1p1nl9q7IpsziKxr_');
+        })();
+    </script>
 </head>
 <body>
     <header>
         <div class="interface">
             <nav class="Menu">
-                <div class="dark-mode-toggle"
-                id="dark-mode-toggle" class="dark-mode-toggle">
-                <button><i class="bi bi-moon-fill"></i></button>
-            </div>
-
-            <ul>
-                <li><a href="#inicio">Ínicio</a></li>
-                <li><a href="#especialidades">Especialidades</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-            </ul>
+                <div id="dark-mode-toggle" class="dark-mode-toggle">
+                    <button aria-label="Toggle dark mode"><i class="bi bi-moon-fill"></i></button>
+                </div>
+                <ul>
+                    <li><a href="#inicio">Ínicio</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                </ul>
             </nav>
-
             <div class="Contato">
                 <a href="#contato">
-                    <button><a href="#contato">Contato</a></button>
+                    <button>Contato</button>
                 </a>
             </div>
-
             <div class="btn-abrir" id="btn-menu">
                 <i class="bi bi-list-nested"></i>
             </div>
-
             <div class="menu-mobile" id="menu-mobile">
-
                 <div class="btn-fechar">
                     <i class="bi bi-x-lg"></i>
                 </div>
-
                 <nav>
                     <ul>
                         <li><a href="#inicio">Ínicio</a></li>
@@ -62,20 +55,14 @@
                         <li><a href="#projetos">Projetos</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
-                    </nav>
-
-                    <div class="dark-mode-toggle-mobile"
-                    id="dark-mode-toggle-mobile" class="dark-mode-toggle-mobile">
-                <button><i class="bi bi-moon-fill"></i></button>
+                </nav>
+                <div id="dark-mode-toggle-mobile" class="dark-mode-toggle-mobile">
+                    <button aria-label="Toggle dark mode"><i class="bi bi-moon-fill"></i></button>
                 </div>
-
             </div>
             <div class="overlay-menu" id="overlay-menu"></div>
         </div>
-        
-        <div class="linha-menu">
-                
-        </div>
+        <div class="linha-menu"></div>
     </header>
 
     <main>
@@ -83,22 +70,22 @@
             <div class="interface">
                 <div class="flex">
                     <div class="img-topo">
-                        <img src="images/fotinha-site.jpg" alt="fotinha-minha" height="500" width="300">
+                        <img src="images/fotinha-site.jpg" alt="José Vieira" height="500" width="300">
+                    </div>
+                    <div class="texto-topo">
+                        <h1>OLÁ! MEU NOME É JOSÉ, <span>E SOU UM INICIANTE NA PROGRAMAÇÃO, ATUALMENTE FOCADO EM DESENVOLVIMENTO JAVA, HTML-CSS, C# E JAVASCRIPT</span></h1>
+                        <p>Estou em constante busca por aprimoramento e novos desafios na área de tecnologia. Sou um profissional dedicado e comunicativo, 
+                            sempre disposto a colaborar e aprender. Com uma mentalidade focada em crescimento, estou determinado a expandir meu repertório de habilidades
+                            e conquistar novas experiências no mundo da programação.</p>
+                        <div class="btn-social">
+                            <a href="https://www.instagram.com/jose_vln_/" target="_blank"><button aria-label="Instagram"><i class="bi bi-instagram"></i></button></a>
+                            <a href="https://www.linkedin.com/in/josé-vieira-ba48a82b5/" target="_blank"><button aria-label="LinkedIn"><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://github.com/JV-Lopes" target="_blank"><button aria-label="GitHub"><i class="bi bi-github"></i></button></a>      
                         </div>
-                        <div class="texto-topo">
-                            <h1>OLÁ! MEU NOME É JOSÉ, <span>E SOU UM INICIANTE NA PROGRAMAÇÃO, ATUALMENTE FOCADO EM DESENVOLVIMENTO JAVA, HTML-CSS, C# E JAVASCRIPT</span></h1>
-                            <p>Estou em constante busca por aprimoramento e novos desafios na área de tecnologia. Sou um profissional dedicado e comunicativo, 
-                                sempre disposto a colaborar e aprender. Com uma mentalidade focada em crescimento, estou determinado a expandir meu repertório de habilidades
-                                e conquistar novas experiências no mundo da programação.</p>
-                            <div class="btn-social">
-                            <a href="https://www.instagram.com/jose_vln_/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="https://www.linkedin.com/in/josé-vieira-ba48a82b5/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
-                            <a href="https://github.com/JV-Lopes" target="_blank"><button><i class="bi bi-github"></i></button></a>      
-                            </div>
-                        </div>
+                    </div>
                 </div>
             </div>
-        </section><!--Topo/Sobre-->
+        </section>
 
         <section id="especialidades" class="Especialidades">
             <div class="interface">
@@ -107,33 +94,26 @@
                     <div class="especialidadesBox">
                         <i class="bi bi-filetype-html"></i><i class="bi bi-filetype-css"></i>
                         <h3>HTML/CSS</h3>
-                        <p>Tenho mais proficiência nessas linguagens, pois esse portifólio foi um metódo muito
-                            bom para treina-las.</p>
+                        <p>Tenho mais proficiência nessas linguagens, pois esse portifólio foi um metódo muito bom para treina-las.</p>
                     </div>
-
                     <div class="especialidadesBox">
                         <i class="bi bi-filetype-java"></i>
                         <h3>Java</h3>
-                        <p>Essa linguagem por enquanto eu tenho um domínio iniciante, já que ela é mais usada por 
-                            mim apenas nas ativiadades da faculdade(por enquanto).</p>
+                        <p>Essa linguagem por enquanto eu tenho um domínio iniciante, já que ela é mais usada por mim apenas nas atividades da faculdade(por enquanto).</p>
                     </div>
-
                     <div class="especialidadesBox">
                         <i class="bi bi-c-square"></i>
                         <h3>C#</h3>
-                        <p>Estudando essa linguagem através de cursos, e já possuo uma facilidade com ela maior do 
-                            que com o Java.</p>
+                        <p>Estudando essa linguagem através de cursos, e já possuo uma facilidade com ela maior do que com o Java.</p>
                     </div>
-
                     <div class="especialidadesBox">
                         <i class="bi bi-filetype-js"></i>
                         <h3>JavaScript</h3>
-                        <p>Tenho pouca experiência com ela, já que esse portifólio foi o único momento que usei ela
-                            até o momento, mas até consegui aprender bastante.</p>
+                        <p>Tenho pouca experiência com ela, já que esse portifólio foi o único momento que usei ela até o momento, mas até consegui aprender bastante.</p>
                     </div>
                 </div>
             </div>
-        </section><!--Especialidades-->
+        </section>
 
         <section id="projetos" class="Portifolio">
             <div class="interface">
@@ -150,7 +130,7 @@
                     </div>
                 </div>
             </div>
-        </section><!--Portifólio-->
+        </section>
 
         <section id="contato" class="formulario">
             <div class="interface">
@@ -158,9 +138,13 @@
                 <p>(Ainda não funciona)</p>
         
                 <form id="contactForm">
+                    <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" placeholder="*Nome:" required>
+                    <label for="email">Email:</label>
                     <input type="email" name="email" id="email" placeholder="*Email:" required>
+                    <label for="celular">Celular:</label>
                     <input type="text" name="celular" id="celular" placeholder="Celular:">
+                    <label for="mensagem">Mensagem:</label>
                     <textarea name="mensagem" id="mensagem" placeholder="Escreva sua mensagem:" required></textarea>
                     <div class="btn-enviar">
                         <input type="submit" value="ENVIAR">
@@ -169,8 +153,6 @@
                 <p id="feedback" class="feedback"></p>
             </div>
         </section>
-        <!--Formulário-->
-
     </main>
 
     <footer>
@@ -182,9 +164,9 @@
                         <h2>Lopes Neto</h2>
                     </div>
                     <div class="btn-social">
-                        <a href="https://www.instagram.com/jose_vln_/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-                        <a href="https://www.linkedin.com/in/josé-vieira-ba48a82b5/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
-                        <a href="https://github.com/JV-Lopes" target="_blank"><button><i class="bi bi-github"></i></button></a>
+                        <a href="https://www.instagram.com/jose_vln_/" target="_blank"><button aria-label="Instagram"><i class="bi bi-instagram"></i></button></a>
+                        <a href="https://www.linkedin.com/in/josé-vieira-ba48a82b5/" target="_blank"><button aria-label="LinkedIn"><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://github.com/JV-Lopes" target="_blank"><button aria-label="GitHub"><i class="bi bi-github"></i></button></a>
                     </div>
                 </div>
             </div>
